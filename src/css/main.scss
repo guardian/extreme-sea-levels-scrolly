@@ -1,6 +1,10 @@
 @import "mq";
 @import "fonts";
 @import "palette";
+@import "scrolly";
+@import "interactive";
+@import "footer";
+/*@import "enhancer";*/
 
 // Uncomment for embeds
 //@import "embed";
@@ -10,4 +14,179 @@
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+}
+
+.tooltip {
+	font-size:16px;
+	pointer-events: none;	
+	border: 1px #000 solid;
+	padding:2px 5px 2px 5px;
+	color:#000;
+}
+
+.red {
+			color: red;
+		}
+
+#mapLocations {
+
+	width: 100%;
+
+	.cells path {
+	  fill: none;
+	  pointer-events: all;
+	}
+	
+	.labelText {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+	}
+
+	.purple2 {
+		border-bottom: 2px solid #8c96c6;
+	}
+
+	.purple3 {
+		border-bottom: 2px solid #8c6bb1;
+	}
+
+	.purple4 {
+		border-bottom: 2px solid #6e016b;
+	}
+
+	.blue {
+		border-bottom: 2px solid #67a9cf;
+	}
+}
+
+#scrolly-2 {
+
+		.mean1 {
+		color: #951c55;
+		}
+
+		.mean2 {
+		color: #b82266;
+		}
+
+		.red {
+			color: red;
+		}
+
+
+	.cells path {
+	  fill: none;
+	  pointer-events: all;
+	}
+
+	.label {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+		font-size:12px;
+	}
+
+	.labelText {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+		font-size:14px;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #767676;
+	  shape-rendering: crispEdges;
+	}
+
+	.line {
+		fill: none;
+	}
+	
+	.tick {
+		display: none;
+	}
+}
+
+#scrolly-3 {
+
+	.cells path {
+	  fill: none;
+	  pointer-events: all;
+	}
+
+	.red {
+			color: red;
+		}
+
+	.cells :hover circle {
+	  stroke: black;
+	}
+	
+	.mapCircle1:hover, .mapCircle2:hover {
+		stroke: #000;
+		stroke-width:1px;
+	}
+
+	.noHeight {
+		height: 0;
+	}
+
+	.labelText {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+	}
+
+/*	#map1 {
+		position: relative;
+	}*/
+
+	#counter {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+		position: absolute;
+		left:45%;
+		top:15%;
+	}
+
+/*	#map1, #map2 {
+		width:50%;
+		float: left;
+	}*/
+
+	.col50 {
+		float:left;
+		width:49%;
+		margin-right:1%; 
+	}
+
+	.row {
+		position: relative;
+	}
+
+	.row:after {
+		content: " "; /* Older browser do not support empty content */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+
+
+
+	@media (max-width: 620px) {
+
+	.col10, .col20, .col30, .col40, .col50, .col60, .col70, .col80, .col90 {
+	width:100%;
+	margin:0;
+	}
+
+	#counter {
+		font-family: 'Guardian Text Sans Web',Arial;
+		fill: #767676;
+		position: absolute;
+		left:39%;
+		top:90%;
+	}
+
+}
 }
